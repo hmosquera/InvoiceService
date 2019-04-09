@@ -1,0 +1,145 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RVModelStoreContainer" CdmEntityContainer="RVInvoice">
+    <FunctionImportMapping FunctionImportName="InvoiceLogStored" FunctionName="RVModel.Store.InvoiceLogStored">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="RVModel.InvoiceLogStored_Result">
+          <ScalarProperty Name="opcion" ColumnName="opcion" />
+          <ScalarProperty Name="prefix" ColumnName="prefix" />
+          <ScalarProperty Name="number" ColumnName="number" />
+          <ScalarProperty Name="response" ColumnName="response" />
+          <ScalarProperty Name="respuesta" ColumnName="respuesta" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <EntitySetMapping Name="CreditFileDetails">
+      <EntityTypeMapping TypeName="RVModel.CreditFileDetail">
+        <MappingFragment StoreEntitySet="CreditFileDetail">
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+          <ScalarProperty Name="TaxPercent" ColumnName="TaxPercent" />
+          <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+          <ScalarProperty Name="Observation1" ColumnName="Observation1" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="IVAAmount" ColumnName="IVAAmount" />
+          <ScalarProperty Name="IVAPercent" ColumnName="IVAPercent" />
+          <ScalarProperty Name="SubTotalAmount" ColumnName="SubTotalAmount" />
+          <ScalarProperty Name="UnitAmount" ColumnName="UnitAmount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="CNNumber" ColumnName="CNNumber" />
+          <ScalarProperty Name="CNPrefix" ColumnName="CNPrefix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CreditNoteFiles">
+      <EntityTypeMapping TypeName="RVModel.CreditNoteFile">
+        <MappingFragment StoreEntitySet="CreditNoteFile">
+          <ScalarProperty Name="Observation1" ColumnName="Observation1" />
+          <ScalarProperty Name="ReteFuente" ColumnName="ReteFuente" />
+          <ScalarProperty Name="CauseId" ColumnName="CauseId" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TaxTotalAmount" ColumnName="TaxTotalAmount" />
+          <ScalarProperty Name="SubTotalAmount" ColumnName="SubTotalAmount" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="CNNumber" ColumnName="CNNumber" />
+          <ScalarProperty Name="CNPrefix" ColumnName="CNPrefix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DebitFileDetails">
+      <EntityTypeMapping TypeName="RVModel.DebitFileDetail">
+        <MappingFragment StoreEntitySet="DebitFileDetail">
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+          <ScalarProperty Name="TaxPercent" ColumnName="TaxPercent" />
+          <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+          <ScalarProperty Name="Observation1" ColumnName="Observation1" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="IVAAmount" ColumnName="IVAAmount" />
+          <ScalarProperty Name="IVAPercent" ColumnName="IVAPercent" />
+          <ScalarProperty Name="SubTotalAmount" ColumnName="SubTotalAmount" />
+          <ScalarProperty Name="UnitAmount" ColumnName="UnitAmount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="DNNumber" ColumnName="DNNumber" />
+          <ScalarProperty Name="DNPrefix" ColumnName="DNPrefix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DebitNoteFiles">
+      <EntityTypeMapping TypeName="RVModel.DebitNoteFile">
+        <MappingFragment StoreEntitySet="DebitNoteFile">
+          <ScalarProperty Name="Observation1" ColumnName="Observation1" />
+          <ScalarProperty Name="ReteFuente" ColumnName="ReteFuente" />
+          <ScalarProperty Name="CauseId" ColumnName="CauseId" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TaxTotalAmount" ColumnName="TaxTotalAmount" />
+          <ScalarProperty Name="SubTotalAmount" ColumnName="SubTotalAmount" />
+          <ScalarProperty Name="InvoiceNumber" ColumnName="InvoiceNumber" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="DNNumber" ColumnName="DNNumber" />
+          <ScalarProperty Name="DNPrefix" ColumnName="DNPrefix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceFileDetails">
+      <EntityTypeMapping TypeName="RVModel.InvoiceFileDetail">
+        <MappingFragment StoreEntitySet="InvoiceFileDetail">
+          <ScalarProperty Name="Observation1" ColumnName="Observation1" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="IVAAmount" ColumnName="IVAAmount" />
+          <ScalarProperty Name="IVAPercent" ColumnName="IVAPercent" />
+          <ScalarProperty Name="SubTotalAmount1" ColumnName="SubTotalAmount1" />
+          <ScalarProperty Name="UnitAmount" ColumnName="UnitAmount" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="ItemType" ColumnName="ItemType" />
+          <ScalarProperty Name="ItemCode" ColumnName="ItemCode" />
+          <ScalarProperty Name="DocumentNumber1" ColumnName="DocumentNumber1" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InvoiceFileHeaders">
+      <EntityTypeMapping TypeName="RVModel.InvoiceFileHeader">
+        <MappingFragment StoreEntitySet="InvoiceFileHeader">
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="ItemDescription1" ColumnName="ItemDescription1" />
+          <ScalarProperty Name="TaxAmount" ColumnName="TaxAmount" />
+          <ScalarProperty Name="TaxPercent" ColumnName="TaxPercent" />
+          <ScalarProperty Name="TaxCode" ColumnName="TaxCode" />
+          <ScalarProperty Name="Observation1" ColumnName="Observation1" />
+          <ScalarProperty Name="TotalAmount" ColumnName="TotalAmount" />
+          <ScalarProperty Name="TaxTotalAmount" ColumnName="TaxTotalAmount" />
+          <ScalarProperty Name="SubTotalAmount" ColumnName="SubTotalAmount" />
+          <ScalarProperty Name="TRM" ColumnName="TRM" />
+          <ScalarProperty Name="Currency" ColumnName="Currency" />
+          <ScalarProperty Name="AcquirerEmail" ColumnName="AcquirerEmail" />
+          <ScalarProperty Name="AcquirerDepartment" ColumnName="AcquirerDepartment" />
+          <ScalarProperty Name="AcquirerCity" ColumnName="AcquirerCity" />
+          <ScalarProperty Name="AcquirerAddress" ColumnName="AcquirerAddress" />
+          <ScalarProperty Name="AcquirerTelephoneNumber" ColumnName="AcquirerTelephoneNumber" />
+          <ScalarProperty Name="AcquirerDocumentNumberCheck" ColumnName="AcquirerDocumentNumberCheck" />
+          <ScalarProperty Name="AcquirerDocumentNumber" ColumnName="AcquirerDocumentNumber" />
+          <ScalarProperty Name="AcquirerDocumentTypeId" ColumnName="AcquirerDocumentTypeId" />
+          <ScalarProperty Name="AcquirerLastName" ColumnName="AcquirerLastName" />
+          <ScalarProperty Name="AcquirerMiddleName" ColumnName="AcquirerMiddleName" />
+          <ScalarProperty Name="AcquirerFirstName" ColumnName="AcquirerFirstName" />
+          <ScalarProperty Name="AcquirerRegimenTypeId" ColumnName="AcquirerRegimenTypeId" />
+          <ScalarProperty Name="AcquirerPersonTypeId" ColumnName="AcquirerPersonTypeId" />
+          <ScalarProperty Name="ExpirationDate" ColumnName="ExpirationDate" />
+          <ScalarProperty Name="IssueDate" ColumnName="IssueDate" />
+          <ScalarProperty Name="DocumentNumber" ColumnName="DocumentNumber" />
+          <ScalarProperty Name="DocumentNumber1" ColumnName="DocumentNumber1" />
+          <ScalarProperty Name="Prefix" ColumnName="Prefix" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

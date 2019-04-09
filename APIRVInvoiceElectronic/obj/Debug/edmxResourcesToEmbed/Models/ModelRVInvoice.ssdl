@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RVModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'RV.dbo.CreditFileDetail' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="CreditFileDetail">
+    <Key>
+      <PropertyRef Name="CNPrefix" />
+      <PropertyRef Name="CNNumber" />
+      <PropertyRef Name="ItemCode" />
+      <PropertyRef Name="ItemType" />
+      <PropertyRef Name="ItemDescription" />
+      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="SubTotalAmount" />
+      <PropertyRef Name="IVAPercent" />
+      <PropertyRef Name="IVAAmount" />
+      <PropertyRef Name="TaxCode" />
+      <PropertyRef Name="TaxPercent" />
+      <PropertyRef Name="TaxAmount" />
+    </Key>
+    <Property Name="CNPrefix" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="CNNumber" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ItemCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="ItemType" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="ItemDescription" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitAmount" Type="money" />
+    <Property Name="SubTotalAmount" Type="money" Nullable="false" />
+    <Property Name="IVAPercent" Type="int" Nullable="false" />
+    <Property Name="IVAAmount" Type="money" Nullable="false" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="Observation1" Type="varchar" MaxLength="2000" />
+    <Property Name="TaxCode" Type="int" Nullable="false" />
+    <Property Name="TaxPercent" Type="int" Nullable="false" />
+    <Property Name="TaxAmount" Type="money" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'RV.dbo.CreditNoteFile' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="CreditNoteFile">
+    <Key>
+      <PropertyRef Name="CNPrefix" />
+      <PropertyRef Name="CNNumber" />
+      <PropertyRef Name="SubTotalAmount" />
+      <PropertyRef Name="TaxTotalAmount" />
+      <PropertyRef Name="CauseId" />
+      <PropertyRef Name="ReteFuente" />
+    </Key>
+    <Property Name="CNPrefix" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="CNNumber" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DocumentNumber" Type="varchar" MaxLength="15" />
+    <Property Name="IssueDate" Type="datetime" />
+    <Property Name="InvoiceNumber" Type="varchar" MaxLength="20" />
+    <Property Name="SubTotalAmount" Type="money" Nullable="false" />
+    <Property Name="TaxTotalAmount" Type="money" Nullable="false" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="CauseId" Type="int" Nullable="false" />
+    <Property Name="ReteFuente" Type="money" Nullable="false" />
+    <Property Name="Observation1" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'RV.dbo.DebitFileDetail' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="DebitFileDetail">
+    <Key>
+      <PropertyRef Name="DNPrefix" />
+      <PropertyRef Name="DNNumber" />
+      <PropertyRef Name="ItemCode" />
+      <PropertyRef Name="ItemType" />
+      <PropertyRef Name="ItemDescription" />
+      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="SubTotalAmount" />
+      <PropertyRef Name="IVAPercent" />
+      <PropertyRef Name="IVAAmount" />
+      <PropertyRef Name="TaxCode" />
+      <PropertyRef Name="TaxPercent" />
+      <PropertyRef Name="TaxAmount" />
+    </Key>
+    <Property Name="DNPrefix" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="DNNumber" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ItemCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="ItemType" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="ItemDescription" Type="varchar" MaxLength="255" Nullable="false" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitAmount" Type="money" />
+    <Property Name="SubTotalAmount" Type="money" Nullable="false" />
+    <Property Name="IVAPercent" Type="int" Nullable="false" />
+    <Property Name="IVAAmount" Type="money" Nullable="false" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="Observation1" Type="varchar" MaxLength="2000" />
+    <Property Name="TaxCode" Type="int" Nullable="false" />
+    <Property Name="TaxPercent" Type="int" Nullable="false" />
+    <Property Name="TaxAmount" Type="money" Nullable="false" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'RV.dbo.DebitNoteFile' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="DebitNoteFile">
+    <Key>
+      <PropertyRef Name="DNPrefix" />
+      <PropertyRef Name="DNNumber" />
+      <PropertyRef Name="SubTotalAmount" />
+      <PropertyRef Name="TaxTotalAmount" />
+      <PropertyRef Name="CauseId" />
+      <PropertyRef Name="ReteFuente" />
+    </Key>
+    <Property Name="DNPrefix" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="DNNumber" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DocumentNumber" Type="varchar" MaxLength="15" />
+    <Property Name="IssueDate" Type="datetime" />
+    <Property Name="InvoiceNumber" Type="varchar" MaxLength="20" />
+    <Property Name="SubTotalAmount" Type="money" Nullable="false" />
+    <Property Name="TaxTotalAmount" Type="money" Nullable="false" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="CauseId" Type="int" Nullable="false" />
+    <Property Name="ReteFuente" Type="money" Nullable="false" />
+    <Property Name="Observation1" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'RV.dbo.InvoiceFileDetail' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="InvoiceFileDetail">
+    <Key>
+      <PropertyRef Name="Prefix" />
+      <PropertyRef Name="DocumentNumber1" />
+      <PropertyRef Name="ItemCode" />
+      <PropertyRef Name="ItemType" />
+      <PropertyRef Name="Quantity" />
+      <PropertyRef Name="UnitAmount" />
+    </Key>
+    <Property Name="Prefix" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="DocumentNumber1" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="ItemCode" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="ItemType" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="ItemDescription" Type="varchar" MaxLength="150" />
+    <Property Name="Quantity" Type="int" Nullable="false" />
+    <Property Name="UnitAmount" Type="money" Nullable="false" />
+    <Property Name="SubTotalAmount1" Type="money" />
+    <Property Name="IVAPercent" Type="varchar" MaxLength="4" />
+    <Property Name="IVAAmount" Type="money" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="Observation1" Type="varchar" MaxLength="2000" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6002: La tabla o vista 'RV.dbo.InvoiceFileHeader' no tiene definida ninguna clave principal. Se ha inferido la clave y la definición se creado como una vista o tabla de solo lectura.-->
+  <EntityType Name="InvoiceFileHeader">
+    <Key>
+      <PropertyRef Name="Prefix" />
+      <PropertyRef Name="DocumentNumber1" />
+      <PropertyRef Name="AcquirerFirstName" />
+      <PropertyRef Name="AcquirerCity" />
+      <PropertyRef Name="AcquirerDepartment" />
+      <PropertyRef Name="Currency" />
+      <PropertyRef Name="TRM" />
+      <PropertyRef Name="TaxCode" />
+      <PropertyRef Name="ItemDescription1" />
+      <PropertyRef Name="Amount" />
+    </Key>
+    <Property Name="Prefix" Type="varchar" MaxLength="2" Nullable="false" />
+    <Property Name="DocumentNumber1" Type="decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="DocumentNumber" Type="varchar" MaxLength="13" />
+    <Property Name="IssueDate" Type="datetime" />
+    <Property Name="ExpirationDate" Type="datetime" />
+    <Property Name="AcquirerPersonTypeId" Type="char" MaxLength="1" />
+    <Property Name="AcquirerRegimenTypeId" Type="char" MaxLength="1" />
+    <Property Name="AcquirerFirstName" Type="varchar" MaxLength="250" Nullable="false" />
+    <Property Name="AcquirerMiddleName" Type="int" />
+    <Property Name="AcquirerLastName" Type="int" />
+    <Property Name="AcquirerDocumentTypeId" Type="char" MaxLength="2" />
+    <Property Name="AcquirerDocumentNumber" Type="varchar" MaxLength="15" />
+    <Property Name="AcquirerDocumentNumberCheck" Type="int" />
+    <Property Name="AcquirerTelephoneNumber" Type="varchar" MaxLength="50" />
+    <Property Name="AcquirerAddress" Type="varchar" MaxLength="150" />
+    <Property Name="AcquirerCity" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AcquirerDepartment" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="AcquirerEmail" Type="varchar" MaxLength="100" />
+    <Property Name="Currency" Type="varchar" MaxLength="3" Nullable="false" />
+    <Property Name="TRM" Type="int" Nullable="false" />
+    <Property Name="SubTotalAmount" Type="money" />
+    <Property Name="TaxTotalAmount" Type="money" />
+    <Property Name="TotalAmount" Type="money" />
+    <Property Name="Observation1" Type="varchar" MaxLength="2000" />
+    <Property Name="TaxCode" Type="int" Nullable="false" />
+    <Property Name="TaxPercent" Type="varchar" MaxLength="4" />
+    <Property Name="TaxAmount" Type="money" />
+    <Property Name="ItemDescription1" Type="varchar" MaxLength="22" Nullable="false" />
+    <Property Name="Amount" Type="int" Nullable="false" />
+  </EntityType>
+  <Function Name="InvoiceLogStored" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="opcion" Type="int" Mode="In" />
+    <Parameter Name="prefix" Type="varchar" Mode="In" />
+    <Parameter Name="number" Type="varchar" Mode="In" />
+    <Parameter Name="response" Type="varchar" Mode="In" />
+    <Parameter Name="respuesta" Type="varchar" Mode="In" />
+  </Function>
+  <EntityContainer Name="RVModelStoreContainer">
+    <EntitySet Name="CreditFileDetail" EntityType="Self.CreditFileDetail" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CreditFileDetail].[CNPrefix] AS [CNPrefix], 
+    [CreditFileDetail].[CNNumber] AS [CNNumber], 
+    [CreditFileDetail].[ItemCode] AS [ItemCode], 
+    [CreditFileDetail].[ItemType] AS [ItemType], 
+    [CreditFileDetail].[ItemDescription] AS [ItemDescription], 
+    [CreditFileDetail].[Quantity] AS [Quantity], 
+    [CreditFileDetail].[UnitAmount] AS [UnitAmount], 
+    [CreditFileDetail].[SubTotalAmount] AS [SubTotalAmount], 
+    [CreditFileDetail].[IVAPercent] AS [IVAPercent], 
+    [CreditFileDetail].[IVAAmount] AS [IVAAmount], 
+    [CreditFileDetail].[TotalAmount] AS [TotalAmount], 
+    [CreditFileDetail].[Observation1] AS [Observation1], 
+    [CreditFileDetail].[TaxCode] AS [TaxCode], 
+    [CreditFileDetail].[TaxPercent] AS [TaxPercent], 
+    [CreditFileDetail].[TaxAmount] AS [TaxAmount]
+    FROM [dbo].[CreditFileDetail] AS [CreditFileDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="CreditNoteFile" EntityType="Self.CreditNoteFile" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [CreditNoteFile].[CNPrefix] AS [CNPrefix], 
+    [CreditNoteFile].[CNNumber] AS [CNNumber], 
+    [CreditNoteFile].[DocumentNumber] AS [DocumentNumber], 
+    [CreditNoteFile].[IssueDate] AS [IssueDate], 
+    [CreditNoteFile].[InvoiceNumber] AS [InvoiceNumber], 
+    [CreditNoteFile].[SubTotalAmount] AS [SubTotalAmount], 
+    [CreditNoteFile].[TaxTotalAmount] AS [TaxTotalAmount], 
+    [CreditNoteFile].[TotalAmount] AS [TotalAmount], 
+    [CreditNoteFile].[CauseId] AS [CauseId], 
+    [CreditNoteFile].[ReteFuente] AS [ReteFuente], 
+    [CreditNoteFile].[Observation1] AS [Observation1]
+    FROM [dbo].[CreditNoteFile] AS [CreditNoteFile]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DebitFileDetail" EntityType="Self.DebitFileDetail" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DebitFileDetail].[DNPrefix] AS [DNPrefix], 
+    [DebitFileDetail].[DNNumber] AS [DNNumber], 
+    [DebitFileDetail].[ItemCode] AS [ItemCode], 
+    [DebitFileDetail].[ItemType] AS [ItemType], 
+    [DebitFileDetail].[ItemDescription] AS [ItemDescription], 
+    [DebitFileDetail].[Quantity] AS [Quantity], 
+    [DebitFileDetail].[UnitAmount] AS [UnitAmount], 
+    [DebitFileDetail].[SubTotalAmount] AS [SubTotalAmount], 
+    [DebitFileDetail].[IVAPercent] AS [IVAPercent], 
+    [DebitFileDetail].[IVAAmount] AS [IVAAmount], 
+    [DebitFileDetail].[TotalAmount] AS [TotalAmount], 
+    [DebitFileDetail].[Observation1] AS [Observation1], 
+    [DebitFileDetail].[TaxCode] AS [TaxCode], 
+    [DebitFileDetail].[TaxPercent] AS [TaxPercent], 
+    [DebitFileDetail].[TaxAmount] AS [TaxAmount]
+    FROM [dbo].[DebitFileDetail] AS [DebitFileDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="DebitNoteFile" EntityType="Self.DebitNoteFile" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DebitNoteFile].[DNPrefix] AS [DNPrefix], 
+    [DebitNoteFile].[DNNumber] AS [DNNumber], 
+    [DebitNoteFile].[DocumentNumber] AS [DocumentNumber], 
+    [DebitNoteFile].[IssueDate] AS [IssueDate], 
+    [DebitNoteFile].[InvoiceNumber] AS [InvoiceNumber], 
+    [DebitNoteFile].[SubTotalAmount] AS [SubTotalAmount], 
+    [DebitNoteFile].[TaxTotalAmount] AS [TaxTotalAmount], 
+    [DebitNoteFile].[TotalAmount] AS [TotalAmount], 
+    [DebitNoteFile].[CauseId] AS [CauseId], 
+    [DebitNoteFile].[ReteFuente] AS [ReteFuente], 
+    [DebitNoteFile].[Observation1] AS [Observation1]
+    FROM [dbo].[DebitNoteFile] AS [DebitNoteFile]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InvoiceFileDetail" EntityType="Self.InvoiceFileDetail" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InvoiceFileDetail].[Prefix] AS [Prefix], 
+    [InvoiceFileDetail].[DocumentNumber1] AS [DocumentNumber1], 
+    [InvoiceFileDetail].[ItemCode] AS [ItemCode], 
+    [InvoiceFileDetail].[ItemType] AS [ItemType], 
+    [InvoiceFileDetail].[ItemDescription] AS [ItemDescription], 
+    [InvoiceFileDetail].[Quantity] AS [Quantity], 
+    [InvoiceFileDetail].[UnitAmount] AS [UnitAmount], 
+    [InvoiceFileDetail].[SubTotalAmount1] AS [SubTotalAmount1], 
+    [InvoiceFileDetail].[IVAPercent] AS [IVAPercent], 
+    [InvoiceFileDetail].[IVAAmount] AS [IVAAmount], 
+    [InvoiceFileDetail].[TotalAmount] AS [TotalAmount], 
+    [InvoiceFileDetail].[Observation1] AS [Observation1]
+    FROM [dbo].[InvoiceFileDetail] AS [InvoiceFileDetail]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="InvoiceFileHeader" EntityType="Self.InvoiceFileHeader" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [InvoiceFileHeader].[Prefix] AS [Prefix], 
+    [InvoiceFileHeader].[DocumentNumber1] AS [DocumentNumber1], 
+    [InvoiceFileHeader].[DocumentNumber] AS [DocumentNumber], 
+    [InvoiceFileHeader].[IssueDate] AS [IssueDate], 
+    [InvoiceFileHeader].[ExpirationDate] AS [ExpirationDate], 
+    [InvoiceFileHeader].[AcquirerPersonTypeId] AS [AcquirerPersonTypeId], 
+    [InvoiceFileHeader].[AcquirerRegimenTypeId] AS [AcquirerRegimenTypeId], 
+    [InvoiceFileHeader].[AcquirerFirstName] AS [AcquirerFirstName], 
+    [InvoiceFileHeader].[AcquirerMiddleName] AS [AcquirerMiddleName], 
+    [InvoiceFileHeader].[AcquirerLastName] AS [AcquirerLastName], 
+    [InvoiceFileHeader].[AcquirerDocumentTypeId] AS [AcquirerDocumentTypeId], 
+    [InvoiceFileHeader].[AcquirerDocumentNumber] AS [AcquirerDocumentNumber], 
+    [InvoiceFileHeader].[AcquirerDocumentNumberCheck] AS [AcquirerDocumentNumberCheck], 
+    [InvoiceFileHeader].[AcquirerTelephoneNumber] AS [AcquirerTelephoneNumber], 
+    [InvoiceFileHeader].[AcquirerAddress] AS [AcquirerAddress], 
+    [InvoiceFileHeader].[AcquirerCity] AS [AcquirerCity], 
+    [InvoiceFileHeader].[AcquirerDepartment] AS [AcquirerDepartment], 
+    [InvoiceFileHeader].[AcquirerEmail] AS [AcquirerEmail], 
+    [InvoiceFileHeader].[Currency] AS [Currency], 
+    [InvoiceFileHeader].[TRM] AS [TRM], 
+    [InvoiceFileHeader].[SubTotalAmount] AS [SubTotalAmount], 
+    [InvoiceFileHeader].[TaxTotalAmount] AS [TaxTotalAmount], 
+    [InvoiceFileHeader].[TotalAmount] AS [TotalAmount], 
+    [InvoiceFileHeader].[Observation1] AS [Observation1], 
+    [InvoiceFileHeader].[TaxCode] AS [TaxCode], 
+    [InvoiceFileHeader].[TaxPercent] AS [TaxPercent], 
+    [InvoiceFileHeader].[TaxAmount] AS [TaxAmount], 
+    [InvoiceFileHeader].[ItemDescription1] AS [ItemDescription1], 
+    [InvoiceFileHeader].[Amount] AS [Amount]
+    FROM [dbo].[InvoiceFileHeader] AS [InvoiceFileHeader]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
