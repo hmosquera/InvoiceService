@@ -16,5 +16,26 @@ namespace APIRVInvoiceElectronic.Controllers
 
         [HttpGet]
         public IEnumerable<InvoiceLogStored> Get() { return fac.GetAll(); }
+
+        public IHttpActionResult Post(InvoiceLogStored item)
+        {
+            try
+            {
+                if (item.opcion != 0)
+                {
+                    return Ok(fac.AddInvoiceLogStored(item));
+                }
+                else
+                {
+                    return Ok(fac.AddInvoiceLogStored(item));
+                }
+            }
+            catch
+            {
+                return StatusCode(HttpStatusCode.BadRequest);
+            }
+        }
     }
+
+
 }

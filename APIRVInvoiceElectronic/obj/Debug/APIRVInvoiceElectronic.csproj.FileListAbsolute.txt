@@ -221,5 +221,6 @@ D:\RVInvoiceElectronic\APIRVInvoiceElectronic\bin\es\Microsoft.Owin.Security.Goo
 D:\RVInvoiceElectronic\APIRVInvoiceElectronic\bin\es\Microsoft.Owin.Security.Twitter.resources.dll
 D:\RVInvoiceElectronic\APIRVInvoiceElectronic\bin\es\Microsoft.Owin.Security.MicrosoftAccount.resources.dll
 D:\RVInvoiceElectronic\APIRVInvoiceElectronic\bin\es\System.Web.Http.Owin.resources.dll
+D:\RVInvoiceElectronic\APIRVInvoiceElectronic\obj\Debug\APIRVInvoiceElectronic.csprojResolveAssemblyReference.cache
 D:\RVInvoiceElectronic\APIRVInvoiceElectronic\obj\Debug\APIRVInvoiceElectronic.dll
 D:\RVInvoiceElectronic\APIRVInvoiceElectronic\obj\Debug\APIRVInvoiceElectronic.pdb
